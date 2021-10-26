@@ -1,6 +1,7 @@
-import java.util.Scanner;
 
 // To find Armstrong Number between two given number.
+
+import java.util.Scanner;
 
 public class ArmstrongNum {
     public static void main(String[] args) {
