@@ -1,6 +1,8 @@
 /*
 Leetcode problem - Easy
-Subtract the Product and Sum of Digits of an Integer
+
+Problem Statement:
+Subtract the Product and Sum of Digits of an Integer.
 
 Example 1:
 
