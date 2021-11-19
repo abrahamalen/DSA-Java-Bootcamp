@@ -1,6 +1,7 @@
-import java.util.Scanner;
 
 // Area Of Circle Java Program
+
+import java.util.Scanner;
 
 public class CircleArea {
     public static void main(String[] args) {
