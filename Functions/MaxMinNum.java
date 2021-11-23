@@ -46,7 +46,6 @@ public class MaxMinNum {
         if (third > max) {
             max = third;
         }
-
         return max;
     }
 }
