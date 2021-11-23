@@ -24,5 +24,4 @@ public class Prime {
         }
         return c * c > n; // > n returns true otherwise returns false
     }
-
 }
