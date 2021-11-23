@@ -25,7 +25,6 @@ public class Armstrong {
             n = n / 10;
             sum = sum + rem * rem * rem;
         }
-
         return sum == original;
     }
 }
