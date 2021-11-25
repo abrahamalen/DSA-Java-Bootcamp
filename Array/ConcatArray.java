@@ -25,3 +25,15 @@ Constraints:
     1 <= n <= 1000
     1 <= nums[i] <= 1000
 */
+
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+      int numsl = nums.length;
+      int[] ans = new int[2 * numsl];
+        for(int i = 0; i < numsl; i++) {
+            ans[i] = nums[i];
+            ans[i + numsl] = nums[i];
+        }
+        return ans;
+    }
+}
