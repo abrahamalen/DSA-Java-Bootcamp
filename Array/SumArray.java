@@ -23,3 +23,16 @@ Constraints:
     1 <= nums.length <= 1000
     -10^6 <= nums[i] <= 10^6
 */
+
+class Solution {
+    public int[] runningSum(int[] nums) {
+        int n = nums.length;
+        int[] sums = new int[n];
+        int sum = 0;
+        for(int i = 0; i < n; i++) {
+            sum = sum + nums[i];
+            sums[i] = sum;
+        }
+        return sums;
+    }
+}
