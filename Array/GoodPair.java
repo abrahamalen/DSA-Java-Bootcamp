@@ -24,3 +24,18 @@ Constraints:
     1 <= nums.length <= 100
     1 <= nums[i] <= 100
 */
+
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        int n = nums.length;
+        int sum = 0;
+        for(int i = 0; i < n; i++) {
+            for(int j = i + 1; j < n; j++) {
+                if(nums[i] == nums[j] && i < j) {
+                    sum++;
+                }
+            }
+        }
+        return sum;
+    }
+}
