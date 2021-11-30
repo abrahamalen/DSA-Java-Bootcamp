@@ -18,3 +18,14 @@ Constraints:
     1 <= sentence.length <= 1000
     sentence consists of lowercase English letters.
 */
+
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+        for(char i='a'; i <= 'z'; i++) {
+            if(!sentence.contains(String.valueOf(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
