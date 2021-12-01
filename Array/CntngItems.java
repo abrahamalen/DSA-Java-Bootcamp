@@ -26,3 +26,23 @@ Constraints:
     ruleKey is equal to either "type", "color", or "name".
     All strings consist only of lowercase letters.
 */
+
+class Solution {
+    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int ruleIndex;
+        if(ruleKey.equals("type"))
+            ruleIndex = 0;
+        else if(ruleKey.equals("color"))
+            ruleIndex = 1;
+        else
+            ruleIndex = 2;
+        
+        int count = 0;
+        int n = items.size();
+        for(int item = 0; item < n; item++) {
+            if(items.get(item).get(ruleIndex).equals(ruleValue))
+                count++;
+        }
+        return count;
+    }
+}
