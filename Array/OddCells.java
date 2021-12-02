@@ -26,3 +26,34 @@ Constraints:
     0 <= ri < m
     0 <= ci < n
 */
+
+class Solution {
+    public int oddCells(int m, int n, int[][] indices) {
+        int[] rowArr = new int[m];
+        int[] colArr = new int[n];
+        int countRow = 0;
+        int countCol = 0;
+        // time indices.length\
+        
+        for (int i = 0; i < indices.length; i++) {
+            int rowPos = indices[i][0];
+            int colPos = indices[i][1];
+            rowArr[rowPos]++;
+            countRow++;
+            colArr[colPos]++;
+            countCol++;
+            
+            if (rowArr[rowPos] % 2 == 0 && rowArr[rowPos] != 0) {
+                rowArr[rowPos] = 0;
+                countRow = countRow - 2;
+            }
+            
+            if (colArr[colPos] % 2 == 0 && colArr[colPos] != 0) {
+                colArr[colPos] = 0;
+                countCol = countCol - 2;
+            }
+        }
+        
+        return countRow*n + countCol*m - 2*countRow*countCol;
+    }
+}
