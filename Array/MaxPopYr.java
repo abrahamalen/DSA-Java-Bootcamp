@@ -22,3 +22,19 @@ Constraints:
     1 <= logs.length <= 100
     1950 <= birthi < deathi <= 2050
 */
+
+class Solution {
+    public int maximumPopulation(int[][] logs) {
+        int arr[]=new int[100];
+        for(int i=0;i<logs.length;i++) {
+            for(int j=logs[i][0];j<logs[i][1];j++)
+            arr[j-1950]++;
+        }
+        int max=0;
+        for(int i=1;i<arr.length;i++) {
+            if(arr[max]<arr[i])
+            max=i;
+        }
+        return max+1950;
+    }
+}
